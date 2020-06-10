@@ -6,8 +6,8 @@ int main(int argc, char *argv[])
 {
     QApplication app(argc,argv);
 
-    QWidget *window = new QWidget;
-    window->setWindowTitle("Enter your Age"); //display at window above as enter your age
+    QWidget *cde = new QWidget;
+    cde->setWindowTitle("Enter your Age"); //display at window above as enter your age
 
     QSpinBox *spinBox = new QSpinBox;
     QSlider *slider = new QSlider(Qt::Horizontal); //take Horizontal position
@@ -21,11 +21,11 @@ int main(int argc, char *argv[])
     spinBox->setValue(35); //set default value
 
     QHBoxLayout *layout = new QHBoxLayout; //create the layout
-    layout->addWidget(spinBox); 
-    layout->addWidget(slider);
-    window->setLayout(layout);
+    layout->addWidget(spinBox); //for layout box of window
+    layout->addWidget(slider); //layout or  margin outside spin box and slide
+    cde->setLayout(layout);
 
-    window->show();//show the whole of the window
+    cde->show();//show the whole of the window
 
     return app.exec();
 }
